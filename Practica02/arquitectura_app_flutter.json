@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Flutter Mobile App Architecture",
+    "quality_profile": "showcase",
+    "locale": "en"
+  },
+  "layout": {"mode":"grid","cols":4,"gapX":90,"gapY":90,"cellW":190,"cellH":82},
+  "components": [
+    {"id":"flutter","label":"Flutter Mobile App","type":"frontend","sublabel":"Mobile client","row":2,"col":0},
+    {"id":"keycloak","label":"Keycloak","type":"security","sublabel":"OIDC authentication","row":0,"col":1},
+    {"id":"api","label":"FastAPI REST API","type":"backend","sublabel":"Application API","row":2,"col":2},
+    {"id":"postgres","label":"PostgreSQL","type":"database","row":1,"col":3},
+    {"id":"mongo","label":"MongoDB","type":"database","row":3,"col":3},
+    {"id":"maps","label":"Leaflet / Maps Service","type":"external","sublabel":"Map tiles / geodata","row":0,"col":0,"size":[210,60]},
+    {"id":"docker","label":"Docker","type":"cloud","sublabel":"Container runtime","row":3,"col":1},
+    {"id":"compose","label":"Docker Compose","type":"cloud","sublabel":"Local orchestration","row":3,"col":2},
+    {"id":"git","label":"Git","type":"external","sublabel":"Source control","row":4,"col":1},
+    {"id":"github","label":"GitHub","type":"external","sublabel":"Remote repository","row":4,"col":2}
+  ],
+  "boundaries": [
+    {"kind":"security-group","label":"Mobile trust zone","wraps":["flutter"]},
+    {"kind":"security-group","label":"Backend trust zone","wraps":["keycloak","api","postgres","mongo"]},
+    {"kind":"region","label":"External services","wraps":["maps"]},
+    {"kind":"region","label":"Development tools","wraps":["docker","compose","git","github"]}
+  ],
+  "connections": [
+    {"id":"login","from":"flutter","to":"keycloak","label":"OIDC sign-in"},
+    {"id":"token-api","from":"flutter","to":"api","label":"HTTPS REST + bearer token"},
+    {"id":"api-postgres","from":"api","to":"postgres","label":"SQL queries"},
+    {"id":"api-mongo","from":"api","to":"mongo","label":"Document queries"},
+    {"id":"map-tiles","from":"flutter","to":"maps","label":"Map tiles / geodata","fromSide":"top","toSide":"bottom"},
+    {"id":"compose-docker","from":"compose","to":"docker","label":"Orchestrates containers"},
+    {"id":"dev-compose","from":"compose","to":"api","label":"Local development runtime"},
+    {"id":"git-github","from":"git","to":"github","label":"Push / pull source"}
+  ]
+}
