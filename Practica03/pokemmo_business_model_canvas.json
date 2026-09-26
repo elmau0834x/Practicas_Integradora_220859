@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "PokéMMO | Lienzo de modelo de negocio",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1160,
+      800
+    ]
+  },
+  "components": [
+    {
+      "id": "segments",
+      "type": "external",
+      "label": "Segmentos de clientes",
+      "sublabel": "Fans clásicos, MMO y PvP",
+      "size": [
+        200,
+        430
+      ],
+      "pos": [
+        908,
+        90
+      ]
+    },
+    {
+      "id": "propositions",
+      "type": "backend",
+      "label": "Propuesta de valor",
+      "sublabel": "Aventura MMO con PvP y comercio",
+      "size": [
+        200,
+        430
+      ],
+      "pos": [
+        484,
+        90
+      ]
+    },
+    {
+      "id": "channels",
+      "type": "frontend",
+      "label": "Canales",
+      "sublabel": "Sitio oficial, clientes y comunidades",
+      "size": [
+        200,
+        209
+      ],
+      "pos": [
+        696,
+        311
+      ]
+    },
+    {
+      "id": "relationships",
+      "type": "frontend",
+      "label": "Relaciones con clientes",
+      "sublabel": "Soporte, eventos y comunidad activa",
+      "size": [
+        200,
+        209
+      ],
+      "pos": [
+        696,
+        90
+      ]
+    },
+    {
+      "id": "revenue",
+      "type": "security",
+      "label": "Flujos de ingresos",
+      "sublabel": "Donaciones y compras opcionales",
+      "size": [
+        508,
+        200
+      ],
+      "pos": [
+        592,
+        540
+      ]
+    },
+    {
+      "id": "resources",
+      "type": "database",
+      "label": "Recursos clave",
+      "sublabel": "Servidores, cliente y equipo técnico",
+      "size": [
+        200,
+        209
+      ],
+      "pos": [
+        272,
+        311
+      ]
+    },
+    {
+      "id": "activities",
+      "type": "backend",
+      "label": "Actividades clave",
+      "sublabel": "Desarrollo, operación y moderación",
+      "size": [
+        200,
+        209
+      ],
+      "pos": [
+        272,
+        90
+      ]
+    },
+    {
+      "id": "partnerships",
+      "type": "external",
+      "label": "Asociaciones clave",
+      "size": [
+        200,
+        430
+      ],
+      "pos": [
+        60,
+        90
+      ],
+      "sublabel": "Plataformas y proveedores de servicio"
+    },
+    {
+      "id": "costs",
+      "type": "cloud",
+      "label": "Estructura de costos",
+      "sublabel": "Alojamiento, desarrollo y soporte",
+      "size": [
+        508,
+        200
+      ],
+      "pos": [
+        60,
+        540
+      ]
+    }
+  ]
+}
