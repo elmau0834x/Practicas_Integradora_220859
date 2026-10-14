@@ -2,7 +2,7 @@
 
 Diagrama interactivo de **secuencia de pantallas (wireframes/sketches)** para una aplicación móvil *companion* de **PokéMMO**. El diagrama presenta una arquitectura de navegación basada en **3 carriles** que cubren una cuenta única con **2 módulos funcionales**: Entrenador/Combate y Trader del GTL. Todo el proyecto fue generado en un único archivo HTML autocontenido con renderizado SVG e interactividad CSS/JS.
 
-**[👉 Ver el diagrama interactivo en GitHub Pages](https://elmau0834x.github.io/Practicas_DMI_220859/Practica06/pokemmo-secuencia-pantallas.html)**
+**[👉 Ver el diagrama interactivo en GitHub Pages](https://elmau0834x.github.io/Practicas_Integradora_220859/Practica06/pokemmo-secuencia-pantallas.html)**
 
 ### Vista Previa del Diagrama
 ![Vista previa del diagrama de secuencia de pantallas](./src/img/image.png)
